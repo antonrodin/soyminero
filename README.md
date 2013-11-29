@@ -6,7 +6,7 @@ Authors:
 
 <ul>
 <li>Anton Zekeriev Rodin @azrodin</li>
-<li>Jorge Duran</li>
+<li>Jorge Durán Gómez</li>
 </ul>
 
 <h2>Features: </h2>
