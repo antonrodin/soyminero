@@ -10,7 +10,9 @@
 <?php wp_head(); ?>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<header id="header">
+    <div class="container">
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="container">
         <div class="navbar-header">
@@ -39,5 +41,7 @@
                     )); 
         ?>
     </nav>
+    </div>
+</header>
     
     <div class="container">

@@ -11,3 +11,15 @@ Author: Anton Zekeriev Rodin, Jorge Duran
  
 /* Import Bootstrap CSS Framework  */
 @import url('css/bootstrap.min.css');
+
+body { font-family: "Asap", Calibri, Candara, Arial, sans-serif; font-weight: 400;  color: #5a5a5a; font-size:12pt; }
+
+/* !Header */
+#header { background-color: #111; width: 100%; min-height: 100px; border-bottom: 10px solid #5a1;}
+/* ¡Header */
+
+/* !Footer */
+#footer { width: 100%; min-height: 60px; background-color: #111; border-top: 10px solid #5cbf14; }
+    #footer p, #footer h4 { text-align: center; padding: 5px 10px; color: #fff; text-shadow: 1px 1px 1px #000; }
+    #footer a { color: #fff; text-decoration: underline; }
+/* Â¡Footer */
