@@ -7,6 +7,7 @@ Authors:
 <ul>
 <li>Anton Zekeriev Rodin @azrodin</li>
 <li>Jorge Durán Gómez</li>
+<li>Carlos Yañez Carrasco</li>
 </ul>
 
 <h2>Features: </h2>
