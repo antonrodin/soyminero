@@ -8,6 +8,7 @@ Authors:
 <li>Anton Zekeriev Rodin @azrodin</li>
 <li>Jorge Durán Gómez</li>
 <li>Carlos Yañez Carrasco</li>
+<li>Prueba</li>
 </ul>
 
 <h2>Features: </h2>
