@@ -26,7 +26,9 @@
                             <?php  
                                 if(has_post_thumbnail()){  
                                     the_post_thumbnail('medium');  
-                                }  
+                                } else {
+                                    echo '<img src="holder.js/300x300" alt="No image" >';
+                                }
                             ?>  
                         </a>    
                 
