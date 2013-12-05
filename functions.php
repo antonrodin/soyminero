@@ -129,6 +129,13 @@ register_taxonomy('tag', array('video'), array(
     'show_ui' => true,  
     'query_var' => true,  
     'rewrite' => array( 'slug' => 'tag' ),  
-));  
+));
+
+/**
+ * Add support for post thumbnails
+ */
+if (function_exists( 'add_theme_support' ) ) {
+	add_theme_support( 'post-thumbnails' );
+}
 
 ?>
