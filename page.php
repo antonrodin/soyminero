@@ -22,6 +22,10 @@ get_header(); ?>
 		<?php endif; ?>
                 
             </header><!-- page header -->
+            
+            <div>
+                <p>&nbsp;</p>
+            </div>
 
             <div class="entry-content">
 		<?php the_content(); ?>
