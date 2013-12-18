@@ -23,8 +23,24 @@ body { font-family: "Asap", Calibri, Candara, Arial, sans-serif; font-weight: 40
 #header { background-color: #000; width: 100%; min-height: 100px; border-bottom: 10px solid #5a1;}
 /* ¡Header */
 
+/* !Images */
+.wp-caption { margin: 5px; padding: 5px; border: solid 1px #E5E5FF; background: #E5F2FF; font-size:90%; color: black }
+
+img .alignright {float:right; margin:0 0 1em 1em}
+img .alignleft {float:left; margin:0 1em 1em 0}
+img .aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+.alignright {float:right; }
+.alignleft {float:left; }
+.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+a img .alignright {float:right; margin:0 0 1em 1em}
+a img .alignleft {float:left; margin:0 1em 1em 0}
+a img .aligncenter {display: block; margin-left: auto; margin-right: auto}
+/* ¡Images */
+
 /* !Footer */
 #footer { width: 100%; min-height: 60px; background-color: #000; border-top: 10px solid #5cbf14; }
     #footer p, #footer h2 { text-align: center; padding: 5px 10px; color: #fff; text-shadow: 1px 1px 1px #000; }
     #footer a { color: #fff; text-decoration: underline; }
-/* Â¡Footer */
+/* ¡Footer */
