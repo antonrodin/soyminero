@@ -39,8 +39,10 @@ get_header(); ?>
     <?php endwhile; ?>
 
     </div>
-    <div class="col-lg-8">
-        
+    <div class="col-lg-4">
+        <?php if ( is_active_sidebar( 'sidebar-right' ) ) : ?>
+            <?php dynamic_sidebar( 'sidebar-right' ); ?>
+        <?php endif; ?>
     </div>
 </div>
 

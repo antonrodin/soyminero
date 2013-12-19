@@ -8,6 +8,10 @@
  */
 require_once('lib/wp_bootstrap_navwalker.php');
 
+/* Custom widgets for wordpress theme
+ */
+require_once('widgets/exchange.php');
+
 function soyminero_menu() {
     $menus = array(
         "header-menu"  => __("Header Menu"),
@@ -18,10 +22,21 @@ function soyminero_menu() {
 add_action("init", "soyminero_menu");
 
 /** Register Widgets into our theme
+ *  Left Widget Area
  *  Footer widget area and sidebar widget area
  */
-function footer_widgets_init() {
+function soyminero_widgets_init() {
 
+        register_sidebar( array(
+		'name' => __('Sidebar right'),
+                'description' => __('The widgets in this area will be shown on the right side'),
+		'id' => 'sidebar-right',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
+	) );
+    
 	register_sidebar( array(
 		'name' => __('Home footer left'),
                 'description' => __('The widgets in this area will be shown on the left bottom side of the footer'),
@@ -42,7 +57,7 @@ function footer_widgets_init() {
 		'after_title' => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'footer_widgets_init' );
+add_action( 'widgets_init', 'soyminero_widgets_init' );
 
 /** Last Videos
  *  Register a Custom Video Post's
@@ -137,6 +152,14 @@ register_taxonomy('tag', array('video'), array(
 if (function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
 }
+
+/**
+ * Register custom widgets
+ */
+function soyminero_register_widgets() {
+    register_widget( 'ExchangeSoyminero' );
+}
+add_action( 'widgets_init', 'soyminero_register_widgets' );
 
 
 ?>

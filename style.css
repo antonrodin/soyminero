@@ -24,7 +24,7 @@ body { font-family: "Asap", Calibri, Candara, Arial, sans-serif; font-weight: 40
 /* ¡Header */
 
 /* !Images */
-.wp-caption { padding: 5px; margin: 5px 10px; }
+.wp-caption { padding: 5px; margin: 5px 10px; border: 1px solid #5a5a5a; }
 .wp-caption.alignleft { margin-left: 0px; }
 .wp-caption.alignright { margin-right: 0px; }
 
