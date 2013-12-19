@@ -12,9 +12,9 @@ class ExchangeSoyminero extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
-	?>
-        <h1>Bitcoin Value: </h1>
-        <?php
+            echo $args['before_widget'];
+            echo "<h1>Test: </h1>";
+            echo $args['after_widget'];
 	}
 
 	public function form( $instance ) {
