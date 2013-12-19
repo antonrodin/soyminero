@@ -24,19 +24,21 @@ body { font-family: "Asap", Calibri, Candara, Arial, sans-serif; font-weight: 40
 /* ¡Header */
 
 /* !Images */
-.wp-caption { margin: 5px; padding: 5px; border: solid 1px #E5E5FF; background: #E5F2FF; font-size:90%; color: black }
+.wp-caption { padding: 5px; margin: 5px 10px; }
+.wp-caption.alignleft { margin-left: 0px; }
+.wp-caption.alignright { margin-right: 0px; }
 
-img .alignright {float:right; margin:0 0 1em 1em}
-img .alignleft {float:left; margin:0 1em 1em 0}
-img .aligncenter {display: block; margin-left: auto; margin-right: auto}
+img.alignright {float: right; margin: 10px; margin-right: 0px; }
+img.alignleft {float:left; margin: 10px; margin-left: 0px; }
+img.aligncenter {display: block; margin: 10px auto; }
 
 .alignright {float:right; }
 .alignleft {float:left; }
 .aligncenter {display: block; margin-left: auto; margin-right: auto}
 
-a img .alignright {float:right; margin:0 0 1em 1em}
-a img .alignleft {float:left; margin:0 1em 1em 0}
-a img .aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin: 10px; margin-right: 0px; }
+a img.alignleft {float:left; margin: 10px; margin-left: 0px; }
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 /* ¡Images */
 
 /* !Footer */
