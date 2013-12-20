@@ -1,6 +1,4 @@
-    </div><!-- end container -->
-    
-    <div id="footer">
+<div id="footer">
         <div class="container">
             <div class="row">
                 <?php if ( is_active_sidebar( 'footer-left' ) ) : ?>
@@ -15,7 +13,7 @@
                 <?php endif; ?>
             </div>
         </div>
-    </div>
+</div>
     
     
     <!-- Loading JavaScript Libs for perfomance -->

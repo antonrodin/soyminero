@@ -1,9 +1,7 @@
 <?php
 /**
- * Default page themplate
- * Designed for soy minero theme
+ * Post template
  */
-
 get_header(); ?>
 
 <div class="container">

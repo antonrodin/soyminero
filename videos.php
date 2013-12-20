@@ -1,6 +1,7 @@
 <?php 
     /* 
-    * Template Name: Videos 
+    * Template Name: Videos
+    * Custom template page for show Videos in some kind of blog structure.
     */
 
     get_header(); 

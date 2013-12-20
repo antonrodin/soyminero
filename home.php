@@ -5,6 +5,23 @@
 
 get_header(); ?>
 
+<!-- Begin featured section -->
+<aside id="featured">
+        <article class="container">
+            <figure class="pull-left">
+                <img src="<?php bloginfo("template_url"); ?>/img/featured.png" alt="Somos mineros" />
+            </figure>
+            <hgroup class="margin-top-60">
+                <h1 class="text-left">Soy Minero</h1>
+                <h2 class="text-left">Centro minero de Vallekas, 24 horas al dia minamos Bitcoin con pico y pala.</h2>
+            </hgroup>
+            <button type="button" class="btn btn-warning btn-lg">¿Por donde empezamos?</button>
+        </article>
+</aside> <!-- !End featured section -->
+
+
+
+<div class="container">
 <div class="row">
     <div class="col-lg-6">
     <?php /* The loop */ ?>
@@ -84,4 +101,6 @@ get_header(); ?>
     </div>
 </div>
 
+</div><!-- end container -->
+ 
 <?php get_footer(); ?>
