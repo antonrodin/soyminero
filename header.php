@@ -15,6 +15,12 @@
 <link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo("template_url"); ?>/img/apple-touch-icon-152x152.png" />
 <!-- End Favicons -->
 
+<!-- Begin JavaScript --> 
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/holder.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
+<!-- End JavaScript -->
+
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width">
 <title><?php wp_title( '|', true, 'right' ); ?></title>

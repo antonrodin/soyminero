@@ -15,6 +15,7 @@ Author: Anton Zekeriev Rodin, Jorge Duran
 
 body { font-family: "Asap", Calibri, Candara, Arial, sans-serif; font-weight: 400;  color: #5a5a5a; font-size:12pt; }
 
+.margin-10 { margin: 10px; }
 .margin-top-20 {margin-top: 20px;}
 .margin-top-40 {margin-top: 40px;}
 .margin-top-60 {margin-top: 60px;}
@@ -35,7 +36,13 @@ body { font-family: "Asap", Calibri, Candara, Arial, sans-serif; font-weight: 40
     #featured p { color: #fff; }
 /* ¡Featured section */
 
+/* !Hentry */
+.hentry h1 { color: #5a1; font-weight: bold; text-shadow: 1px 1px 1px #000; }
+/* ¡Hentry */
+
 /* !Images */
+.img-border-top-bottom { border-top: 2px solid #000; border-bottom: 2px solid #000; }
+
 .wp-caption { padding: 5px; margin: 5px 10px; border: 1px solid #5a5a5a; }
 .wp-caption.alignleft { margin-left: 0px; }
 .wp-caption.alignright { margin-right: 0px; }

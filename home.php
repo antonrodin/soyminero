@@ -56,8 +56,6 @@ get_header(); ?>
 
     </div>
     <div class="col-lg-6">
-
-
                  <h1>Ultimas noticias</h1>
         <?php $loop = new WP_Query(array('posts_per_page' => 5));  
             $count =0;  
