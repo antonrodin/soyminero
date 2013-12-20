@@ -11,6 +11,7 @@ Author: Anton Zekeriev Rodin, Jorge Duran
  
 /* Import Bootstrap CSS Framework  */
 @import url('css/bootstrap.min.css');
+@import url('css/font-awesome.min.css');
 
 body { font-family: "Asap", Calibri, Candara, Arial, sans-serif; font-weight: 400;  color: #5a5a5a; font-size:12pt; }
 

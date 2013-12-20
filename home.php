@@ -15,7 +15,7 @@ get_header(); ?>
                 <h1 class="text-left">Soy Minero</h1>
                 <h2 class="text-left">Centro minero de Vallekas, 24 horas al dia minamos Bitcoin con pico y pala.</h2>
             </hgroup>
-            <button type="button" class="btn btn-warning btn-lg">¿Por donde empezamos?</button>
+            <button type="button" class="btn btn-default margin-top-20"><i class="fa fa-cog fa-spin"></i> ¿Por donde empezamos?</button>
         </article>
 </aside> <!-- !End featured section -->
 
