@@ -40,7 +40,7 @@ get_header(); ?>
                     </script>
                     <a class="pull-left" href="<?php the_author_url(); ?>"><?php echo get_avatar( get_the_author_id(), '96' ); ?></a>
                     <div class="media-body">
-                        <h4 class="media-heading"><i class="fa fa-user"></i> <a href="<?php the_author_url(); ?>" title="<?php the_author(); ?>"><?php the_author(); ?></a></h4>
+                        <h4 class="media-heading"> <a href="<?php the_author_url(); ?>" title="<?php the_author(); ?>"><i class="fa fa-user"></i> <?php the_author(); ?></a></h4>
                         <p><?php the_author_description(); ?></p>
                     </div>
                 </div><!-- End Author -->
