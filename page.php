@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-<div class="container">
+<div class="container margin-top-40">
 <div class="row">
     <div class="col-lg-8">
     <?php /* The loop */ ?>
@@ -14,7 +14,7 @@ get_header(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <header>
                 
-                <h1 class="text-center"><?php the_title(); ?></h1>
+                <h1 class="titulo-principal text-center"><?php the_title(); ?></h1>
                 
                 <?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 		<div class="entry-thumbnail">

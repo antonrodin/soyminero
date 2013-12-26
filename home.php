@@ -6,7 +6,7 @@
 get_header(); ?>
 
 <!-- Begin featured section -->
-<aside id="featured">
+<aside id="featured" class="margin-top-20">
         <article class="container">
             <figure class="pull-left">
                 <img src="<?php bloginfo("template_url"); ?>/img/featured.png" alt="Somos mineros" />
@@ -15,7 +15,7 @@ get_header(); ?>
                 <h1 class="text-left">Soy Minero</h1>
                 <h2 class="text-left">Centro minero de Vallekas, 24 horas al dia minamos Bitcoin con pico y pala.</h2>
             </hgroup>
-            <button type="button" class="btn btn-default margin-top-20"><i class="fa fa-cog fa-spin"></i> ¿Por donde empezamos?</button>
+            <button type="button" class="btn btn-default margin-top-20"><i class="fa fa-cog fa-spin"></i> ¿Quieres ser minero?</button>
         </article>
 </aside> <!-- !End featured section -->
 
@@ -29,7 +29,7 @@ get_header(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <header>
                 
-                <h1 class="text-center"><?php the_title(); ?></h1>
+                <h1 class="titulo-principal text-center"><?php the_title(); ?></h1>
                 
                 <?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 		<div class="entry-thumbnail">
@@ -56,28 +56,37 @@ get_header(); ?>
 
     </div>
     <div class="col-lg-6">
-                 <h1>Ultimas noticias</h1>
-        <?php $loop = new WP_Query(array('posts_per_page' => 5));  
-            $count =0;  
-        ?>
-        <?php if($loop) { ?>   
+            <h1 class="titulo-principal text-center">Noticias de minería de Bitcoin</h1>
+            <?php $loop = new WP_Query(array('posts_per_page' => 5));  
+                $count =0;  
+            ?>
+            <?php if($loop) { ?>   
             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?> 
                   
+                 <div class="soyminero-img-caption margin-top-40">
                         <a href="<?php the_permalink() ?>">  
                             <?php  
                                 if(has_post_thumbnail()){  
-                                    the_post_thumbnail('medium');  
+                                    the_post_thumbnail('large', array('class' => 'img-responsive'));
                                 } else {
                                     echo '<img src="holder.js/300x300" alt="No image" >';
                                 }
                             ?>  
-                        </a>    
-
-                        <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+                        </a>
+                     <script>
+                        $(function() {
+                            $(".soyminero-img-caption-text").fadeTo('slow', 0.85);
+                        });
+                     </script>
+                     <div class="soyminero-img-caption-text">
+                         <h3 class="text-center"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+                     </div>
+                 </div>
+                        
                         <?php 
                             global $more;
                             $more = 0;
-                            the_content("More...");
+                            the_content("Continua leyendo...");
                         ?> 
 
                         <span class="tags">

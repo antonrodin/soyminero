@@ -4,14 +4,14 @@
  */
 get_header(); ?>
 
-<div class="container">
+<div class="container margin-top-40">
 <div class="row">
     <div class="col-lg-8">
     <?php /* The loop */ ?>
     <?php while ( have_posts() ) : the_post(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <header> 
-                <h1 class="text-center"><?php the_title(); ?></h1>
+                <h1 class="titulo-principal text-center"><?php the_title(); ?></h1>
                 <?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 		<div class="entry-thumbnail">
                     <?php the_post_thumbnail('large', array('class' => 'img-responsive img-border-top-bottom')); ?>
