@@ -33,7 +33,7 @@ a:hover, a:focus { color: #5a1; text-decoration: none; }
 /* ¡Header */
 
 /* !Featured section */
-#featured { background-color: #5a1; border-bottom: 10px solid #000; }
+#featured { clear: both; width: 100%; background-color: #5a1; border-bottom: 10px solid #000; }
     #featured h1 { color: #fff; text-shadow: 1px 1px 1px #000; font-size: 48px; font-weight: bold; }
     #featured h2 { color: #fff; text-shadow: 1px 1px 1px #000; font-size: 18px; font-weight: bold; }
     #featured p { color: #fff; }

@@ -6,8 +6,8 @@
 get_header(); ?>
 
 <!-- Begin featured section -->
-<aside id="featured" class="margin-top-20">
-        <article class="container">
+<aside id="featured" class="clearfix margin-top-60">
+        <div class="container">
             <figure class="pull-left">
                 <img src="<?php bloginfo("template_url"); ?>/img/featured.png" alt="Somos mineros" />
             </figure>
@@ -16,7 +16,7 @@ get_header(); ?>
                 <h2 class="text-left">Centro minero de Vallekas, 24 horas al dia minamos Bitcoin con pico y pala.</h2>
             </div>
             <button type="button" class="btn btn-default margin-top-20"><i class="fa fa-cog fa-spin"></i> ¿Quieres ser minero?</button>
-        </article>
+        </div>
 </aside> <!-- !End featured section -->
 
 
