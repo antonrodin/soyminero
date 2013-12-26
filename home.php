@@ -11,10 +11,10 @@ get_header(); ?>
             <figure class="pull-left">
                 <img src="<?php bloginfo("template_url"); ?>/img/featured.png" alt="Somos mineros" />
             </figure>
-            <hgroup class="margin-top-60">
+            <div class="margin-top-60">
                 <h1 class="text-left">Soy Minero</h1>
                 <h2 class="text-left">Centro minero de Vallekas, 24 horas al dia minamos Bitcoin con pico y pala.</h2>
-            </hgroup>
+            </div>
             <button type="button" class="btn btn-default margin-top-20"><i class="fa fa-cog fa-spin"></i> ¿Quieres ser minero?</button>
         </article>
 </aside> <!-- !End featured section -->

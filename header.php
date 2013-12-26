@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+<!-- Charset First! -->
+<meta charset="<?php bloginfo( 'charset' ); ?>">
     
 <!-- Begin Favicons -->
 <link rel="shortcut icon" href="<?php bloginfo("template_url"); ?>/img/favicon.ico" type="image/x-icon" />
@@ -21,7 +23,6 @@
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
 <!-- End JavaScript -->
 
-<meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -60,6 +61,6 @@
                     'walker'            => new wp_bootstrap_navwalker()
                     )); 
         ?>
-    </nav>
-    </div>
+    </div><!-- End First Container--></nav>
+    </div><!-- End Second Container-->
 </header>

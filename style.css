@@ -75,4 +75,6 @@ a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 #footer { width: 100%; min-height: 60px; background-color: #000; border-top: 10px solid #5cbf14; }
     #footer p, #footer h2 { text-align: center; padding: 5px 10px; color: #fff; text-shadow: 1px 1px 1px #000; }
     #footer a { color: #fff; text-decoration: underline; }
+    #footer .soyminero-credits a { color: #5a1; }
+    #footer .soyminero-credits a:hover { color: #fff; }
 /* ¡Footer */
