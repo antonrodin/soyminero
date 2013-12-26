@@ -44,6 +44,7 @@ a:hover, a:focus { color: #5a1; text-decoration: none; }
 .soyminero-img-caption-text { position: absolute; background-color: #000; bottom:0px; left: 0px; right: 0px; z-index: 10; }
     .soyminero-img-caption-text h3 { font-size: 18px; margin: 5px; }
     .soyminero-img-caption-text a { color: #fff; }
+    .soyminero-img-caption-time { padding: 10px; position: absolute; background-color: #5a1; top: 10px; right: 10px; color: #fff; border-radius: 10px;}
 /* ¡Home Section¡ */
 
 /* !Hentry */

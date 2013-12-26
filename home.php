@@ -64,6 +64,9 @@ get_header(); ?>
             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?> 
                   
                  <div class="soyminero-img-caption margin-top-40">
+                     <div class="soyminero-img-caption-time">
+                         <?php the_time('F jS, Y') ?>
+                     </div>
                         <a href="<?php the_permalink() ?>">  
                             <?php  
                                 if(has_post_thumbnail()){  
@@ -82,6 +85,12 @@ get_header(); ?>
                          <h3 class="text-center"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
                      </div>
                  </div>
+                 <div class="text-right"><small class="tags">
+                            <strong><?php echo __('Archivado en: ') ?> <?php the_category(', '); ?></strong>
+                            <?php
+                                echo get_the_tag_list('<strong>Etiquetado como:</strong> ',', ','');
+                            ?> 
+                 </small></div>
                         
                         <?php 
                             global $more;
@@ -89,14 +98,7 @@ get_header(); ?>
                             the_content("Continua leyendo...");
                         ?> 
 
-                        <span class="tags">
-                            <strong><?php echo __('Etiquetado como: ') ?></strong>
-                            <?php  
-                                // Fetching the tag names with respect to the post and displaying them  
-                                $args = array('orderby' => 'name', 'order' => 'ASC', 'fields' => 'names');  
-                                echo implode(wp_get_object_terms( $post->ID, 'tag', $args),', ');  
-                            ?>  
-                        </span>
+                        
             <?php endwhile; ?>  
                 
                 
