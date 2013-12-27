@@ -8,7 +8,7 @@ get_header(); ?>
 <!-- Begin featured section -->
 <aside id="featured" class="clearfix margin-top-20">
         <div class="container">
-            <figure class="pull-left">
+            <figure class="pull-left margin-top-40">
                 <img src="<?php bloginfo("template_url"); ?>/img/featured.png" alt="Somos mineros" />
             </figure>
             <div class="margin-top-60">
@@ -56,56 +56,7 @@ get_header(); ?>
 
     </div>
     <div class="col-lg-6">
-            <!-- Start Blog -->
-            <h1 class="titulo-principal text-center">Noticias de minería de Bitcoin</h1>
-            <?php $loop = new WP_Query(array('posts_per_page' => 5));  
-                $count =0;  
-            ?>
-            <?php if($loop) { ?>   
-            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?> 
-                  
-                 <div class="soyminero-img-caption margin-top-40">
-                     <div class="soyminero-img-caption-time">
-                         <?php the_time('F jS, Y') ?>
-                     </div>
-                        <a href="<?php the_permalink() ?>">  
-                            <?php  
-                                if(has_post_thumbnail()){  
-                                    the_post_thumbnail('large', array('class' => 'img-responsive'));
-                                } else {
-                                    echo '<img src="holder.js/800x400" alt="No image" >';
-                                }
-                            ?>  
-                        </a>
-                     <script>
-                        $(function() {
-                            $(".soyminero-img-caption-text").fadeTo('slow', 0.85);
-                        });
-                     </script>
-                     <div class="soyminero-img-caption-text">
-                         <h3 class="text-center"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
-                     </div>
-                 </div>
-                 <div class="text-right"><small class="tags">
-                            <strong><?php echo __('Archivado en: ') ?> <?php the_category(', '); ?></strong>
-                            <?php
-                                echo get_the_tag_list('<strong>Etiquetado como:</strong> ',', ','');
-                            ?> 
-                 </small></div>
-                        
-                        <?php 
-                            global $more;
-                            $more = 0;
-                            the_content("Continua leyendo...");
-                        ?> 
-
-                        
-            <?php endwhile; ?>  
-                
-                
-        <?php } ?>  
-        <?php wp_reset_query(); ?>
-        <!-- End Blog -->
+            
 
         <!-- Start Video Blog -->
         <h1 class="titulo-principal text-center">¡Nuestros videos sobre Minería!</h1>
@@ -155,6 +106,57 @@ get_header(); ?>
         <?php } ?>  
         <?php wp_reset_query(); ?>
         <!-- End Video Blog -->
+        
+        <!-- Start Blog -->
+            <h1 class="titulo-principal text-center">Noticias de minería de Bitcoin</h1>
+            <?php $loop = new WP_Query(array('posts_per_page' => 5));  
+                $count =0;  
+            ?>
+            <?php if($loop) { ?>   
+            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?> 
+                  
+                 <div class="soyminero-img-caption margin-top-40">
+                     <div class="soyminero-img-caption-time">
+                         <?php the_time('F jS, Y') ?>
+                     </div>
+                        <a href="<?php the_permalink() ?>">  
+                            <?php  
+                                if(has_post_thumbnail()){  
+                                    the_post_thumbnail('large', array('class' => 'img-responsive'));
+                                } else {
+                                    echo '<img src="holder.js/800x400" alt="No image" >';
+                                }
+                            ?>  
+                        </a>
+                     <script>
+                        $(function() {
+                            $(".soyminero-img-caption-text").fadeTo('slow', 0.85);
+                        });
+                     </script>
+                     <div class="soyminero-img-caption-text">
+                         <h3 class="text-center"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+                     </div>
+                 </div>
+                 <div class="text-right"><small class="tags">
+                            <strong><?php echo __('Archivado en: ') ?> <?php the_category(', '); ?></strong>
+                            <?php
+                                echo get_the_tag_list('<strong>Etiquetado como:</strong> ',', ','');
+                            ?> 
+                 </small></div>
+                        
+                        <?php 
+                            global $more;
+                            $more = 0;
+                            the_content("Continua leyendo...");
+                        ?> 
+
+                        
+            <?php endwhile; ?>  
+                
+                
+        <?php } ?>  
+        <?php wp_reset_query(); ?>
+        <!-- End Blog -->
 
     </div>
 </div>
