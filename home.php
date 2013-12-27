@@ -6,16 +6,16 @@
 get_header(); ?>
 
 <!-- Begin featured section -->
-<aside id="featured" class="clearfix margin-top-60">
+<aside id="featured" class="clearfix margin-top-20">
         <div class="container">
             <figure class="pull-left">
                 <img src="<?php bloginfo("template_url"); ?>/img/featured.png" alt="Somos mineros" />
             </figure>
             <div class="margin-top-60">
                 <h1 class="text-left">Soy Minero</h1>
-                <h2 class="text-left">Centro minero de Vallekas, 24 horas al dia minamos Bitcoin con pico y pala.</h2>
+                <h2 class="text-left">Centro minero de Vallekas, 24 horas al dia minamos <i class="fa fa-btc"></i>itcoin con pico y pala.</h2>
             </div>
-            <button type="button" class="btn btn-default margin-top-20"><i class="fa fa-cog fa-spin"></i> ¿Quieres ser minero?</button>
+            <button type="button" class="btn btn-default margin-top-20">¿Quieres ser minero?</button>
         </div>
 </aside> <!-- !End featured section -->
 
@@ -72,7 +72,7 @@ get_header(); ?>
                                 if(has_post_thumbnail()){  
                                     the_post_thumbnail('large', array('class' => 'img-responsive'));
                                 } else {
-                                    echo '<img src="holder.js/300x300" alt="No image" >';
+                                    echo '<img src="holder.js/800x400" alt="No image" >';
                                 }
                             ?>  
                         </a>

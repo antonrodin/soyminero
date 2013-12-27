@@ -4,7 +4,7 @@
  */
 get_header(); ?>
 
-<div class="container margin-top-40">
+<div class="container margin-top-60">
 <div class="row">
     <div class="col-lg-8">
     <?php /* The loop */ ?>
