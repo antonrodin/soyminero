@@ -56,6 +56,7 @@ get_header(); ?>
 
     </div>
     <div class="col-lg-6">
+            <!-- Start Blog -->
             <h1 class="titulo-principal text-center">Noticias de minería de Bitcoin</h1>
             <?php $loop = new WP_Query(array('posts_per_page' => 5));  
                 $count =0;  
@@ -104,8 +105,56 @@ get_header(); ?>
                 
         <?php } ?>  
         <?php wp_reset_query(); ?>
-        <!-- End Video Blog -->
+        <!-- End Blog -->
 
+        <!-- Start Video Blog -->
+        <h1 class="titulo-principal text-center">¡Nuestros videos sobre Minería!</h1>
+        <?php $loop = new WP_Query(array('post_type' => 'video', 'posts_per_page' => -1));  
+            $count =0;  
+        ?>
+        <?php if($loop) { ?>   
+            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?> 
+                
+                <div class="soyminero-img-caption margin-top-40">
+                    <div class="soyminero-img-caption-time">
+                         <?php the_time('F jS, Y') ?>
+                    </div>
+                    <div class="soyminero-img-caption-youtube">
+                        <p><a href="<?php the_permalink(); ?>"><i class="fa fa-youtube-play fa-4x"></i></a></p>
+                    </div>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php  
+                                if(has_post_thumbnail()){  
+                                    the_post_thumbnail('large', array('class' => 'img-responsive'));
+                                } else {
+                                    echo '<img src="holder.js/800x400" alt="No image" >';
+                                }
+                            ?>  
+                        </a>
+                     <script>
+                        $(function() {
+                            $(".soyminero-img-caption-text").fadeTo('slow', 0.85);
+                        });
+                     </script>
+                     <div class="soyminero-img-caption-text">
+                         <h3 class="text-center"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+                     </div>
+                 </div>
+                 <div class="text-right"><p>&nbsp;</p></div>
+                        
+                        <?php 
+                            global $more;
+                            $more = 0;
+                            the_content("Ver el video...");
+                        ?> 
+
+                        
+            <?php endwhile; ?>  
+                
+                
+        <?php } ?>  
+        <?php wp_reset_query(); ?>
+        <!-- End Video Blog -->
 
     </div>
 </div>
