@@ -9,13 +9,13 @@ get_header(); ?>
 <aside id="featured" class="clearfix margin-top-20">
         <div class="container">
             <figure class="pull-left margin-top-40">
-                <img src="<?php get_template_directory_uri(); ?>/img/featured.png" alt="Somos mineros" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/featured.png" alt="Somos mineros" />
             </figure>
             <div class="margin-top-60">
                 <h1 class="text-left">Soy Minero</h1>
                 <h2 class="text-left">Centro minero de Vallekas, 24 horas al dia minamos <i class="fa fa-btc"></i>itcoin con pico y pala.</h2>
             </div>
-            <button type="button" class="btn btn-default margin-top-20"><?php __('¿Quieres ser minero?', 'soyminero'); ?></button>
+            <button type="button" class="btn btn-default margin-top-20"><?php _e('¿Quieres ser minero?', 'soyminero'); ?></button>
         </div>
 </aside> <!-- !End featured section -->
 
@@ -59,7 +59,7 @@ get_header(); ?>
             
 
         <!-- Start Video Blog -->
-        <h1 class="titulo-principal text-center"><?php __('Nuestros videos sobre mineria:', 'soyminero'); ?></h1>
+        <h1 class="titulo-principal text-center"><?php _e('Nuestros videos sobre mineria:', 'soyminero'); ?></h1>
         <?php $loop = new WP_Query(array('post_type' => 'video', 'posts_per_page' => -1));  
             $count =0;  
         ?>
@@ -108,7 +108,7 @@ get_header(); ?>
         <!-- End Video Blog -->
         
         <!-- Start Blog -->
-            <h1 class="titulo-principal text-center"><?php __('Noticias de mineriade Bitcoin:', 'soyminero'); ?></h1>
+            <h1 class="titulo-principal text-center"><?php _e('Noticias de mineriade Bitcoin:', 'soyminero'); ?></h1>
             <?php $loop = new WP_Query(array('posts_per_page' => 5));  
                 $count =0;  
             ?>
