@@ -9,13 +9,13 @@ get_header(); ?>
 <aside id="featured" class="clearfix margin-top-20">
         <div class="container">
             <figure class="pull-left margin-top-40">
-                <img src="<?php bloginfo("template_url"); ?>/img/featured.png" alt="Somos mineros" />
+                <img src="<?php get_template_directory_uri(); ?>/img/featured.png" alt="Somos mineros" />
             </figure>
             <div class="margin-top-60">
                 <h1 class="text-left">Soy Minero</h1>
                 <h2 class="text-left">Centro minero de Vallekas, 24 horas al dia minamos <i class="fa fa-btc"></i>itcoin con pico y pala.</h2>
             </div>
-            <button type="button" class="btn btn-default margin-top-20">¿Quieres ser minero?</button>
+            <button type="button" class="btn btn-default margin-top-20"><?php __('¿Quieres ser minero?', 'soyminero'); ?></button>
         </div>
 </aside> <!-- !End featured section -->
 
