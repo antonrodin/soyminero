@@ -33,9 +33,9 @@ get_header(); ?>
                                         $(".avatar").addClass('media-object img-rounded')
                                     });
                     </script>
-                    <a class="pull-left" href="<?php the_author_url(); ?>"><?php echo get_avatar( get_the_author_id(), '96' ); ?></a>
+                    <a class="pull-left" href="<?php the_author_meta('url'); ?>"><?php echo get_avatar( get_the_author_id(), '96' ); ?></a>
                     <div class="media-body">
-                        <h4 class="media-heading"> <a href="<?php the_author_url(); ?>" title="<?php the_author(); ?>"><i class="fa fa-user"></i> <?php the_author(); ?></a></h4>
+                        <h4 class="media-heading"> <a href="<?php the_author_meta('url'); ?>" title="<?php the_author(); ?>"><i class="fa fa-user"></i> <?php the_author(); ?></a></h4>
                         <p><?php the_author_description(); ?></p>
                     </div>
                 </div><!-- End Author -->
