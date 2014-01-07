@@ -11,7 +11,7 @@
   
     <!-- Video Blog -->
     <div class="col-lg-6">
-        <h1>¡Nuestros videos!</h1>
+        <h1><?php __('Nuestros videos:', 'soyminero'); ?></h1>
         <?php $loop = new WP_Query(array('post_type' => 'video', 'posts_per_page' => -1));  
             $count =0;  
         ?>

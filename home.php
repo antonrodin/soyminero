@@ -59,7 +59,7 @@ get_header(); ?>
             
 
         <!-- Start Video Blog -->
-        <h1 class="titulo-principal text-center">¡Nuestros videos sobre Minería!</h1>
+        <h1 class="titulo-principal text-center"><?php __('Nuestros videos sobre mineria:', 'soyminero'); ?></h1>
         <?php $loop = new WP_Query(array('post_type' => 'video', 'posts_per_page' => -1));  
             $count =0;  
         ?>
@@ -108,7 +108,7 @@ get_header(); ?>
         <!-- End Video Blog -->
         
         <!-- Start Blog -->
-            <h1 class="titulo-principal text-center">Noticias de minería de Bitcoin</h1>
+            <h1 class="titulo-principal text-center"><?php __('Noticias de mineriade Bitcoin:', 'soyminero'); ?></h1>
             <?php $loop = new WP_Query(array('posts_per_page' => 5));  
                 $count =0;  
             ?>
