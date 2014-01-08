@@ -15,7 +15,7 @@ get_header(); ?>
                 <h1 class="text-left">Soy Minero</h1>
                 <h2 class="text-left">Centro minero de Vallekas, 24 horas al dia minamos <i class="fa fa-btc"></i>itcoin con pico y pala.</h2>
             </div>
-            <button type="button" class="btn btn-default margin-top-20"><?php _e('¿Quieres ser minero?', 'soyminero'); ?></button>
+            <button type="button" class="btn btn-default margin-top-20"><?php _e('Quieres ser minero?', 'soyminero'); ?></button>
         </div>
 </aside> <!-- !End featured section -->
 
@@ -138,7 +138,7 @@ get_header(); ?>
                      </div>
                  </div>
                  <div class="text-right"><small class="tags">
-                            <strong><?php echo __('Archivado en: ') ?> <?php the_category(', '); ?></strong>
+                            <strong><?php echo __('Archivado en: ', 'soyminero') ?> <?php the_category(', '); ?></strong>
                             <?php
                                 echo get_the_tag_list('<strong>Etiquetado como:</strong> ',', ','');
                             ?> 

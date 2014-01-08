@@ -19,8 +19,8 @@
 
 <!-- Begin JavaScript --> 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/holder.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/holder.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
 <!-- End JavaScript -->
 
 <meta name="viewport" content="width=device-width">

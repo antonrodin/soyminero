@@ -35,7 +35,7 @@
                         <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>  
 
                         <span class="tags">
-                            <strong><?php echo __('Etiquetado como: ') ?></strong>
+                            <strong><?php echo __('Etiquetado como: ', 'soyminero') ?></strong>
                             <?php  
                                 // Fetching the tag names with respect to the post and displaying them  
                                 $args = array('orderby' => 'name', 'order' => 'ASC', 'fields' => 'names');  

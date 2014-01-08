@@ -1,0 +1,1 @@
+Hi folks! Nothing here... sorry. Readme.txt requiered by Wordpress theme cheker

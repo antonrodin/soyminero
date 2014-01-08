@@ -14,8 +14,8 @@ require_once('widgets/exchange.php');
 
 function soyminero_menu() {
     $menus = array(
-        "header-menu"  => __("Header Menu"),
-        "sidebar-menu" => __("Sidebar Menu")
+        "header-menu"  => __("Header Menu", 'soyminero'),
+        "sidebar-menu" => __("Sidebar Menu", 'soyminero')
     );
     register_nav_menus($menus);
 }
@@ -28,8 +28,8 @@ add_action("init", "soyminero_menu");
 function soyminero_widgets_init() {
 
         register_sidebar( array(
-		'name' => __('Sidebar right'),
-                'description' => __('The widgets in this area will be shown on the right side'),
+		'name' => __('Sidebar right', 'soyminero'),
+                'description' => __('The widgets in this area will be shown on the right side', 'soyminero'),
 		'id' => 'sidebar-right',
 		'before_widget' => '<div>',
 		'after_widget' => '</div>',
@@ -38,8 +38,8 @@ function soyminero_widgets_init() {
 	) );
     
 	register_sidebar( array(
-		'name' => __('Home footer left'),
-                'description' => __('The widgets in this area will be shown on the left bottom side of the footer'),
+		'name' => __('Home footer left', 'soyminero'),
+                'description' => __('The widgets in this area will be shown on the left bottom side of the footer', 'soyminero'),
 		'id' => 'footer-left',
 		'before_widget' => '<div>',
 		'after_widget' => '</div>',
@@ -48,8 +48,8 @@ function soyminero_widgets_init() {
 	) );
         
         register_sidebar( array(
-		'name' => __('Home footer right'),
-                'description' => __('The widgets in this area will be shown on the right bottom side of the footer'),
+		'name' => __('Home footer right', 'soyminero'),
+                'description' => __('The widgets in this area will be shown on the right bottom side of the footer', 'soyminero'),
 		'id' => 'footer-right',
 		'before_widget' => '<div>',
 		'after_widget' => '</div>',
@@ -64,16 +64,16 @@ add_action( 'widgets_init', 'soyminero_widgets_init' );
  */
 function video_custom_post_init()   {  
   $labels = array(  
-    'name' => _x('Videos', 'post type general name'),  
-    'singular_name' => _x('Video', 'post type singular name'),  
-    'add_new' => _x('Add New', 'video'),  
-    'add_new_item' => __('Add New Video'),  
-    'edit_item' => __('Edit Video'),  
-    'new_item' => __('New Video'),  
-    'view_item' => __('View Video'),  
-    'search_items' => __('Search Videos'),  
-    'not_found' =>  __('No videos found'),  
-    'not_found_in_trash' => __('No videos found in Trash'),  
+    'name' => _x('Videos', 'post type general name', 'soyminero'),  
+    'singular_name' => _x('Video', 'post type singular name', 'soyminero'),  
+    'add_new' => _x('Add New', 'video', 'soyminero'),  
+    'add_new_item' => __('Add New Video', 'soyminero'),  
+    'edit_item' => __('Edit Video', 'soyminero'),  
+    'new_item' => __('New Video', 'soyminero'),  
+    'view_item' => __('View Video', 'soyminero'),  
+    'search_items' => __('Search Videos', 'soyminero'),  
+    'not_found' =>  __('No videos found', 'soyminero'),  
+    'not_found_in_trash' => __('No videos found in Trash', 'soyminero'),  
     'parent_item_colon' => '',  
     'menu_name' => 'Videos'  
   );
@@ -106,18 +106,18 @@ function videos_updated_messages( $messages ) {
   $messages['video'] = array(  
     0 => '', // Unused. Messages start at index 1.  
     1 => sprintf( __('Video updated. <a href="%s">View video</a>'), esc_url( get_permalink($post_ID) ) ),  
-    2 => __('Custom field updated.'),  
-    3 => __('Custom field deleted.'),  
-    4 => __('Video updated.'),  
+    2 => __('Custom field updated.', 'soyminero'),  
+    3 => __('Custom field deleted.', 'soyminero'),  
+    4 => __('Video updated.', 'soyminero'),  
     /* translators: %s: date and time of the revision */  
-    5 => isset($_GET['revision']) ? sprintf( __('Video restored to revision from %s'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,  
-    6 => sprintf( __('Video published. <a href="%s">View video</a>'), esc_url( get_permalink($post_ID) ) ),  
-    7 => __('Video saved.'),  
-    8 => sprintf( __('Video submitted. <a target="_blank" href="%s">Preview video</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),  
-    9 => sprintf( __('Project scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview project</a>'),  
+    5 => isset($_GET['revision']) ? sprintf( __('Video restored to revision from %s', 'soyminero'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,  
+    6 => sprintf( __('Video published. <a href="%s">View video</a>', 'soyminero'), esc_url( get_permalink($post_ID) ) ),  
+    7 => __('Video saved.', 'soyminero'),  
+    8 => sprintf( __('Video submitted. <a target="_blank" href="%s">Preview video</a>', 'soyminero'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),  
+    9 => sprintf( __('Video scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview project</a>', 'soyminero'),  
       // translators: Publish box date format, see http://php.net/date  
-      date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),  
-    10 => sprintf( __('Video draft updated. <a target="_blank" href="%s">Video project</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),  
+      date_i18n( __( 'M j, Y @ G:i' , 'soyminero'), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),  
+    10 => sprintf( __('Video draft updated. <a target="_blank" href="%s">Video project</a>', 'soyminero'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),  
   );  
   
   return $messages;  
