@@ -2,10 +2,10 @@
 Theme Name: Soy Minero
 Theme URI: https://github.com/antonrodin/soyminero
 Author URI: http://www.azr.es
-Version: 0.01
+Version: 0.1
 Description: Designed by <a href="http://www.soyminero.es">Soy Minero Team</a>.
 Author: Anton Zekeriev Rodin, Jorge Duran
-Tags: Bitcoin, Litecoin, Mining, Bitcoin Theme, Green, Bootstrap 3, Responsive
+Tags: Green
 License: MIT
 License URI: http://www.gnu.org/licenses/MIT
 */
@@ -52,13 +52,17 @@ a:hover, a:focus { color: #5a1; text-decoration: none; }
 /* ¡Home Section¡ */
 
 /* !Hentry */
+.sticky {}
 .titulo-principal { color: #5a1; font-weight: bold; text-shadow: 1px 1px 1px #000; }
+.bypostauthor {}
 /* ¡Hentry */
 
 /* !Images */
 .img-border-top-bottom { border-top: 2px solid #000; border-bottom: 2px solid #000; }
-
+.gallery-caption {}
+.size-auto, .size-full, .size-large, .size-medium, .size-thumbnail { max-width: 100%; height: auto; }
 .wp-caption { padding: 5px; margin: 5px 10px; border: 1px solid #5a5a5a; }
+.wp-caption-text {}
 .wp-caption.alignleft { margin-left: 0px; }
 .wp-caption.alignright { margin-right: 0px; }
 

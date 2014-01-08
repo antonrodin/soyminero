@@ -25,5 +25,6 @@
         </div>
     </div>
 </div><!-- Container Footer -->
+<?php wp_footer(); ?>
 </body>
 </html>

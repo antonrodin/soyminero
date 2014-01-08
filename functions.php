@@ -140,5 +140,9 @@ function soyminero_register_widgets() {
 }
 add_action( 'widgets_init', 'soyminero_register_widgets' );
 
+/**
+ * Max content width of images, videos... 
+ */
+if (!isset($content_width)) { $content_width = 1024; }
 
 ?>
