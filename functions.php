@@ -130,7 +130,8 @@ add_filter('post_updated_messages', 'videos_updated_messages');
 if (function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
         add_theme_support( 'automatic-feed-links' );
-        add_theme_support( "custom-header" );
+        add_theme_support( 'custom-header' );
+        add_theme_support( 'custom-background' );
 }
 
 /**
@@ -145,5 +146,17 @@ add_action( 'widgets_init', 'soyminero_register_widgets' );
  * Max content width of images, videos... 
  */
 if (!isset($content_width)) { $content_width = 1024; }
+
+
+/**
+ * Apply theme's stylesheet to the visual editor.
+ *
+ * @uses add_editor_style() Links a stylesheet to visual editor
+ * @uses get_stylesheet_uri() Returns URI of theme stylesheet
+ */
+function soyminero_add_editor_styles() {
+    add_editor_style(get_stylesheet_uri());
+}
+add_action( 'init', 'soyminero_add_editor_styles' );
 
 ?>
