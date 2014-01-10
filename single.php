@@ -47,6 +47,9 @@ get_header(); ?>
                 
                 <?php edit_post_link( __( 'Edit', 'soyminero' ), '<span class="edit-link">', '</span>' ); ?>
             </footer><!-- footer comments -->
+            
+            <?php comments_template(); ?> 
+            
         </article><!-- #page -->
     <?php endwhile; ?>
 
