@@ -1,6 +1,7 @@
-<h1>Soy Minero Custom Wordpress Theme</h1>
+Soy Minero Custom Wordpress Theme
+=================================
 
-<p>This is a wordpress theme used by our site <a href="http://www.soyminero.es">www.soyminero.es</a></p>
+This is a wordpress theme used by our site www.soyminero.es
 
 Authors:
 
@@ -9,7 +10,8 @@ Authors:
 <li>Jorge Durán Gómez</li>
 </ul>
 
-<h2>Features: </h2>
+Features:
+==================================
 
 <ul>
 <li>SoyMinero is a Simple responsive theme:</li>
