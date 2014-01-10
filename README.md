@@ -1,20 +1,18 @@
 Soy Minero Custom Wordpress Theme
 =================================
 
-This is a wordpress theme used by our site www.soyminero.es
+
+This is a wordpress theme used by our site www.soyminero.es. Currently in development. Tested on Wordpress 3.8. MIT licence, use at your own risk.
 
 Authors:
 
-<ul>
-<li>Anton Zekeriev Rodin @azrodin</li>
-<li>Jorge Durán Gómez</li>
-</ul>
+* Anton Zekeriev Rodin @azrodin.
+* Jorge Duran Gomez.
+
 
 Features:
 ==================================
 
-<ul>
-<li>SoyMinero is a Simple responsive theme:</li>
-<li>Bootstrap 3 CSS Framework</li>
-<li>HTML 5</li>
-</ul>
+* SoyMinero is a Simple responsive theme thanx to Bootstrap Framework 3
+* HTML 5
+* CSS3
