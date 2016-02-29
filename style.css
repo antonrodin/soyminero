@@ -9,53 +9,72 @@ Tags: Green
 License: MIT
 License URI: http://www.gnu.org/licenses/MIT
 */
- 
-/* Import Bootstrap CSS Framework  */
-@import url('css/bootstrap.min.css');
-@import url('css/font-awesome.min.css');
 
 body { font-family: "Asap", Calibri, Candara, Arial, sans-serif; font-weight: 400;  color: #5a5a5a; font-size:12pt; }
 
-a { color: #5a1; font-weight: bold; }
-a:hover, a:focus { color: #5a1; text-decoration: none; }
+a { color: #000; font-weight: bold;}
+a:hover, a:focus { color: #000; text-decoration: underline; }
+.label a { color: #fff; }
+.label-warning { background-color: #f0a32f; }
+.capitalize { text-transform: capitalize; }
 
 .margin-10 { margin: 10px; }
 .margin-top-20 {margin-top: 20px;}
 .margin-top-40 {margin-top: 40px;}
 .margin-top-60 {margin-top: 60px;}
+.container-fluid { padding-left: 0px; padding-right: 0px; }
+.background-color-black { background-color: #000; }
+.jumbotron { background-color: #fff; }
+.text-small { font-size: small; }
+.precio-comparador { font-size: 32px; font-weight: bold; color: red; }
 
-/* !Navbar */
+/* !Navbar & Header */
+.navbar { border-radius: 0px; border: 0px; border-bottom: 10px solid #f0a32f; }
+.main-title {color: #f0a32f;margin-top: 25px;font-size: 32px;font-weight: bold;text-shadow: 1px 1px 1px #000;}    
+.sub-title { color: #ddd; font-size: 18px; margin-top: 10px; }
+.site-description { color: #ddd; font-style: italic; font-size: 14px;}
+
+/* Publicidad */
+.container-fluid-styled { margin-top: 5px; background-color: #efefef; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+.publicidad-horizontal-adaptable { margin: 5px 0px; width: 100%;  padding: 5px; }
+@media (max-width: 767px) { .publicidad-horizontal-adaptable { min-height: 100px; } }
+@media (min-width: 768px) { 
+    .publicidad-horizontal-adaptable { min-height: 100px; }
+}
+    .publicidad-horizontal-adaptable-centrar { margin: 5px auto; }
+
+/* Menu */
+.navbar { margin-bottom: 0px; }
 .navbar-inverse { background-color: #000; }
-.navbar { border: 0px; border-bottom: 10px solid #5a1; }
-/* ¡Navbar */
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+  color: #f0a32f; text-shadow: 1px 1px 1px #000;
+  background-color: #000;
+}
+.navbar-toggle {}
+.navbar-inverse .navbar-nav>li>a { color: #f0a32f; text-shadow: 1px 1px 1px #000; }
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:active { background-color: #f0a32f; text-decoration: underline; color: #fff; border-top-left-radius: 5px; border-top-right-radius: 5px;}
+.dropdown-menu>li>a { color: #000; }
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:active { color: #fff; tex-decoration: underline;}
 
-/* !Header */
-#header { width: 100%; clear: both; overflow: hidden; }
-/* ¡Header */
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #f0a32f;
+}
 
-/* !Featured section */
-#featured { clear: both; width: 100%; background-color: #5a1; border-bottom: 10px solid #000; }
-    #featured h1 { color: #fff; text-shadow: 1px 1px 1px #000; font-size: 48px; font-weight: bold; }
-    #featured h2 { color: #fff; text-shadow: 1px 1px 1px #000; font-size: 18px; font-weight: bold; }
-    #featured p { color: #fff; }
-/* ¡Featured section */
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: #fff;
+}
 
-/* !Home Section! */
-.soyminero-img-caption { position: relative; min-height: 250px; height: 250px; width: 100%; overflow: hidden; }
-.soyminero-img-caption-text { position: absolute; background-color: #000; bottom:0px; left: 0px; right: 0px; z-index: 10; }
-    .soyminero-img-caption-text h3 { font-size: 18px; margin: 5px; }
-    .soyminero-img-caption-text a { color: #fff; }
-    .soyminero-img-caption-time { padding: 10px; position: absolute; background-color: #5a1; top: 10px; right: 10px; color: #fff; border-radius: 10px;}
-    .soyminero-img-caption-youtube {position: absolute; left: 45%; top: 30%; }
-    .soyminero-img-caption-youtube a { color: #5a1; }
-    .soyminero-img-caption-youtube a:hover { color: red; }
-/* ¡Home Section¡ */
+/* !Breadcrumb */
+.breadcrumb { background-color: #fff; }
 
 /* !Hentry */
-.sticky {}
-.titulo-principal { color: #5a1; font-weight: bold; text-shadow: 1px 1px 1px #000; }
-.bypostauthor {}
+.main-post-title { margin-top: 5px; color: #000; border-top: 1px solid #ddd; padding-left: 10px; padding-top: 20px;  background-color: #efefef; border-left: 5px solid #ddd; }
+.soyminero-autor { padding: 5px; background-color: #efefef; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
 /* ¡Hentry */
+
+
 
 /* !Images */
 .img-border-top-bottom { border-top: 2px solid #000; border-bottom: 2px solid #000; }
@@ -77,12 +96,47 @@ img.aligncenter {display: block; margin: 10px auto; }
 a img.alignright {float:right; margin: 10px; margin-right: 0px; }
 a img.alignleft {float:left; margin: 10px; margin-left: 0px; }
 a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+/* Entry Thumbnail 16x9 */
+/*******************************/
+.entry-thumbnail { 
+    border-top: 2px solid #000; 
+    border-bottom: 2px solid #000;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 0px;
+    padding-top: 56.25%;
+    overflow: hidden;
+}
+
+.entry-thumbnail img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto; 
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+.category-thumbnail { margin-right: 10px; margin-bottom: 10px; }
+
 /* ¡Images */
 
+/* Widgets */
+/*******************************/
+.widget_categories { background-color: #efefef; border-bottom: 1px solid #000; }
+    .widget_categories h2 { background-color: #fff; color: #000; padding: 5px; border-bottom: 1px solid #000; }
+    .widget_categories a { color: #000; }
+    
 /* !Footer */
-#footer { width: 100%; min-height: 60px; background-color: #000; border-top: 10px solid #5cbf14; }
+#footer { width: 100%; min-height: 60px; background-color: #000; border-top: 10px solid #f0a32f; }
     #footer p, #footer h2 { text-align: center; padding: 5px 10px; color: #fff; text-shadow: 1px 1px 1px #000; }
-    #footer a { color: #fff; text-decoration: underline; }
-    #footer .soyminero-credits a { color: #5a1; }
+    #footer a { color: #f0a32f; text-decoration: underline; }
+    #footer .soyminero-credits a { color: #f0a32f; }
     #footer .soyminero-credits a:hover { color: #fff; }
 /* ¡Footer */

@@ -4,19 +4,43 @@
  */
 get_header(); ?>
 
-<div class="container margin-top-60">
+<div class="container hidden-sm hidden-xs">
+    <!-- Begin Rich Snippets -->
+    <ol class="breadcrumb">
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="<?php bloginfo('url'); ?>" itemprop="url" title="<?php bloginfo('name'); ?>"><span itemprop="title">Portada</span></a>
+            </li> 
+            <?php 
+                    $cat_array = get_the_category();
+                    $cat = $cat_array[0];
+            ?>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="<?php echo get_category_link($cat->cat_ID); ?>" itemprop="url" title="<?php echo $cat->cat_name; ?>"><span itemprop="title"><?php echo $cat->cat_name; ?></span></a>
+            </li>
+            <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a href="<?php echo get_permalink(); ?>" itemprop="url" title="<?php the_title(); ?>"><span itemprop="title"><?php the_title(); ?></span></a>
+            </li>
+    </ol>
+</div>
+
+<div class="container">
 <div class="row">
-    <div class="col-lg-8">
+     <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
     <?php /* The loop */ ?>
     <?php while ( have_posts() ) : the_post(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <header> 
-                <h1 class="titulo-principal text-center"><?php the_title(); ?></h1>
+                <h1 class="text-center"><?php the_title(); ?></h1>
                 <?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-		<div class="entry-thumbnail">
-                    <?php the_post_thumbnail('large', array('class' => 'img-responsive img-border-top-bottom')); ?>
-		</div>
-		<?php endif; ?>  
+                <div class="entry-thumbnail">
+                    <?php the_post_thumbnail('full', array('class' => 'img-responsive img-border-top-bottom')); ?>
+                </div>
+                <?php endif; ?>
+                
+                <div class="post_meta">
+                    <?php the_tags( "<span class='label label-warning'>", "</span> <span class='label label-warning'>", "</span>" ); ?>
+                </div>
+                
             </header><!-- page header -->
             
             <div>
@@ -24,20 +48,16 @@ get_header(); ?>
             </div>
 
             <div class="entry-content">
-		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'soyminero' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
+        <?php the_content(); ?>
+        <?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'soyminero' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
             </div><!-- end content -->
 
             <footer>
-                   
+                
+                <div class="addthis_sharing_toolbox"></div>
+                
                 <!-- Begin Author -->
-                <div class="margin-top-40"></div>
-                <div class="media">
-                    <script>
-                                    $(function() {
-                                        $(".avatar").addClass('media-object img-rounded')
-                                    });
-                    </script>
+                <div class="media soyminero-autor">
                     <a class="pull-left" href="<?php the_author_meta('url'); ?>"><?php echo get_avatar( get_the_author_meta('ID'), '96' ); ?></a>
                     <div class="media-body">
                         <h4 class="media-heading"> <a href="<?php the_author_meta('url'); ?>" title="<?php the_author(); ?>"><i class="fa fa-user"></i> <?php the_author(); ?></a></h4>
@@ -54,10 +74,9 @@ get_header(); ?>
     <?php endwhile; ?>
 
     </div>
-    <div class="col-lg-4">
-        
-        
-            
+    
+    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+        <?php mostrar_adsense_responsivo(); ?>     
         <!-- Right Sidebar -->
         <?php if ( is_active_sidebar( 'sidebar-right' ) ) : ?>
             <?php dynamic_sidebar( 'sidebar-right' ); ?>

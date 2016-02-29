@@ -1,16 +1,41 @@
-Plantilla Wordpress Enfocada a Bitcion
-======================================
+Plantilla Wordpress Responsive y preparada para Adsense
+=======================================================
 
-Esta es nuestra plantilla Wordpress probada hasta la version 3.8.1. Es una plantilla de color verde basada
-en el CSS Framework Bootstrap 3. Es una plantilla "responsiva" que teoricamente se ve correctamente en todos los
-dispositivos.
+Plantilla que empezo enfocada a Adesense y poco a poco la estoy implantando en todos 
+mis pequeños proyectos antiguos. Esta plantilla es "basica" ya que hay que adaptarla a 
+cada proyecto.
+
+Dependencias
+==================================
+https://github.com/twittem/wp-bootstrap-navwalker
+
+
+Instalación
+==================================
+
+1. Crear una pagina con plantilla "Home". En la portada.
+2. Editar el archivo header.php:
+2.1. Añadir Analytics
+2.2. Añadrir Adsense
+2.3. Cambiar el logotipo
+
+Plugins Obligatorios
+==================================
+
+* Wordfence
+* Disqus
+* Yoast SEO
+* AutoUpdater Wordpress 
+
 
 Propiedades:
 ==================================
 
+* Responsive
+* jQuery
 * Bootstrap 3
-* HTML 5 (Verificado)
-* CSS 3 (Verificado pero con errores... cosas del CSS3)
+* HTML 5
+* CSS 3
 * Pasa la validación en el <a href="http://wordpress.org/plugins/theme-check/">Theme Check</a>
 
 Autores:

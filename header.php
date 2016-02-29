@@ -17,23 +17,42 @@
 <link rel="apple-touch-icon" sizes="152x152" href="<?php echo get_template_directory_uri(); ?>/img/apple-touch-icon-152x152.png" />
 <!-- End Favicons -->
 
-<!-- Begin JavaScript --> 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/holder.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
-<!-- End JavaScript -->
+<!-- Bootstrap & Free Cosmo Themplate, FontAwesome CDN... -->
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <meta name="viewport" content="width=device-width">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" >
+
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <header id="header">
-    <div class="container">
-    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+
+<?php //Logo y descripción ?>
+<div class="container-fluid background-color-black"><div class="container">
+        <div class="row">  
+            
+            <div class="col-md-2 hidden-sm hidden-xs">
+                <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo("name"); ?>">
+                    <img class="img-responsive" src="<?php echo bloginfo('template_url'); ?>/img/logotipo.png" alt="Logotipo Soy Minero" />
+                </a>
+            </div>
+
+            <div class="col-md-10 hidden-sm hidden-xs">
+                    <h1 class="main-title"><?php bloginfo("name"); ?></h1>
+                    <h2 class="sub-title">Subtitulo de la pagina. Eslogan o similar. Editar en header.php</h2>
+                    <p class="site-description"><?php bloginfo( 'description' ); ?></p>
+            </div>
+        
+        </div>
+</div></div>
+
+    <div class="container-fluid">
+    <nav class="navbar navbar-inverse" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="container">
         <div class="navbar-header">
@@ -43,10 +62,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
-            <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                <?php bloginfo('name'); ?>
-            </a>
         </div>
         
         <?php 
@@ -64,3 +79,9 @@
     </div><!-- End First Container--></nav>
     </div><!-- End Second Container-->
 </header>
+
+<div class="container-fluid container-fluid-styled">
+    <div class="container">
+        <?php mostrar_adsense_responsivo(); ?>
+    </div>
+</div>
