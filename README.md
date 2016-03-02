@@ -1,8 +1,8 @@
-Plantilla Wordpress Responsive y preparada para Adsense
-=======================================================
+Plantilla Wordpress Responsive
+==============================
 
-Plantilla que empezo enfocada a Adesense y poco a poco la estoy implantando en todos 
-mis pequeños proyectos antiguos. Esta plantilla es "basica" ya que hay que adaptarla a 
+Plantilla que uso en  mis pequeños proyectos antiguos. 
+Esta plantilla es "basica" ya que hay que adaptarla a 
 cada proyecto.
 
 Dependencias
@@ -27,7 +27,6 @@ Plugins Obligatorios
 * Yoast SEO
 * AutoUpdater Wordpress 
 
-
 Propiedades:
 ==================================
 
@@ -36,6 +35,7 @@ Propiedades:
 * Bootstrap 3
 * HTML 5
 * CSS 3
+* Responsive Videos
 * Pasa la validación en el <a href="http://wordpress.org/plugins/theme-check/">Theme Check</a>
 
 Autores:

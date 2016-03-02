@@ -10,7 +10,6 @@
 * Fix for Bootstrap 3.0.0 Wordpress Theme custom menus
 */
 require_once('lib/wp_bootstrap_navwalker.php');
-require_once('lib/wp_adsense_publicidad.php');
 
 /**
 * Custom widgets for wordpress theme
@@ -273,5 +272,15 @@ function soyminero_register_theme_customizer($wp_customizer) {
 
 }
 add_action('customize_register', 'soyminero_register_theme_customizer');
-    
+
+/**
+* Responsive Embed Youtube Videos
+* Para insertar videos, solo tienes que pegar la url de Youtube
+*/
+add_filter( 'embed_oembed_html', 'custom_oembed_filter', 10, 4 ) ;
+function custom_oembed_filter($html, $url, $attr, $post_ID) {
+    $return = '<div class="video-container">'.$html.'</div>';
+    return $return;
+}
+
 ?>
