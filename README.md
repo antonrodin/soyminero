@@ -14,6 +14,8 @@ Instalación
 ==================================
 
 1. Crear una pagina con plantilla "Home". En la portada.
+1.1. La imagen destacada de esa plantilla es la que se muestra a la derecha en la portada
+al lado del jumbotron.
 2. Cambiar el logotipo & jumbotron image
 3. Editar opciones dentro de la personalización de la plantilla
 

@@ -215,21 +215,21 @@ function soyminero_register_theme_customizer($wp_customizer) {
       )
     );
 
-    //Jumbotron Description
+    //Meta Analytics
     $wp_customizer->add_setting(
-            'jumbotron_description',
+            'meta_analytics',
             array(
-                'default'   => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas commodo auctor quam sed porttitor. Suspendisse eu ligula sit amet ligula euismod ornare. Sed volutpat ante felis, vestibulum luctus lectus ultricies a. Cras fermentum consectetur felis posuere vehicula. Sed efficitur ultricies orci, quis aliquet ligula dignissim ac.',
+                'default'   => '<script></script>',
                 'transport' => 'postMessage'
             )
     );
     $wp_customizer->add_control(  
-      'soyminero_jumbotron_description',  
+      'soyminero_meta_analytics',  
       array(  
         'section'   => 'title_tagline',  
-        'label'     => 'Jumbotron Description',  
+        'label'     => 'Analytics Script',  
         'type'      => 'textarea',  
-        'settings'  => 'jumbotron_description'  
+        'settings'  => 'meta_analytics'  
       )
     );
 

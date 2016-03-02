@@ -7,16 +7,18 @@
 
 <div class="container">
     <div class="jumbotron row">
+        <?php while ( have_posts() ) : the_post(); ?>
         <div class="col-lg-8 col-md-12 col-sm-12 col-sx-12">
-        <h1><?php echo get_theme_mod('jumbotron_title', '¡Jumbotron Title!'); ?></h1>
-            <p>
-                <?php echo get_theme_mod('jumbotron_description', 'Descripción que hay que editar desde la pagina de customización de la plantilla...'); ?>
-            </p>
+        <h1><?php the_title(); ?></h1>
+        <?php the_content(); ?>
         </div>
         <div class="col-lg-4 hidden-md hidden-xs hidden-sm">
-            <img class="img-responsive pull-right" alt="A/A Portátil" src="<?php echo get_template_directory_uri(); ?>/img/soy-minero.png">
+            <?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+                <?php the_post_thumbnail('full', array('class' => 'img-responsive pull-right')); ?>
+            <?php endif; ?>
         </div>
     </div>
+    <?php endwhile; ?>
 </div>
 
 <div class="container"><div class="row">
