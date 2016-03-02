@@ -28,6 +28,10 @@
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" >
 
 <?php wp_head(); ?>
+
+<!-- Analytics. Si esta vacío, actualizalo en opciones de personalización -->
+<?php echo get_theme_mod('meta_analytics', '<script></script>'); ?>
+
 </head>
 <body <?php body_class(); ?>>
 <header id="header">
@@ -35,14 +39,7 @@
 <?php //Logo y descripción ?>
 <div class="container-fluid background-color-black"><div class="container">
         <div class="row">  
-            
-            <div class="col-md-2 hidden-sm hidden-xs">
-                <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo("name"); ?>">
-                    <img class="img-responsive" src="<?php echo bloginfo('template_url'); ?>/img/logotipo.png" alt="Logotipo Soy Minero" />
-                </a>
-            </div>
-
-            <div class="col-md-10 hidden-sm hidden-xs">
+            <div class="col-md-12 hidden-xs">
                     <h1 class="main-title"><?php bloginfo("name"); ?></h1>
                     <h2 class="sub-title"><?php echo get_theme_mod('header_eslogan', 'Eslogan por defecto de la plantilla'); ?></h2>
                     <p class="site-description"><?php bloginfo( 'description' ); ?></p>

@@ -16,15 +16,14 @@
     
         <div class="row">
             <div class="col-lg-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <img class="pull-left" width="80" height="80" src="<?php echo bloginfo('template_url'); ?>/img/logotipo.png" alt="Logotipo" />
                 <p><small>
                    <?php echo get_theme_mod('footer_left', 'Opción por defecto: Footer left'); ?>
-                </p>
+               </small></p>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <p><small>
                     <?php echo get_theme_mod('footer_right', 'Opción por defecto: Footer right'); ?>
-                </p>
+                </small></p>
             </div>
         </div>
         
