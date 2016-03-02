@@ -17,9 +17,9 @@ get_header(); ?>
                 <h1 class="titulo-principal text-center"><?php the_title(); ?></h1>
                 
                 <?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-		<div class="entry-thumbnail">
-                    <?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
-		</div>
+        		<div class="entry-thumbnail">
+                    <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
+        		</div>
 		<?php endif; ?>
                 
             </header><!-- page header -->
