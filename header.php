@@ -44,7 +44,7 @@
 
             <div class="col-md-10 hidden-sm hidden-xs">
                     <h1 class="main-title"><?php bloginfo("name"); ?></h1>
-                    <h2 class="sub-title">Subtitulo de la pagina. Eslogan o similar. Editar en header.php</h2>
+                    <h2 class="sub-title"><?php echo get_theme_mod('header_eslogan', 'Eslogan por defecto de la plantilla'); ?></h2>
                     <p class="site-description"><?php bloginfo( 'description' ); ?></p>
             </div>
         

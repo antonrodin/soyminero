@@ -8,9 +8,9 @@
 <div class="container">
     <div class="jumbotron row">
         <div class="col-lg-8 col-md-12 col-sm-12 col-sx-12">
-        <h1>¡Hola Mundo!</h1>
+        <h1><?php echo get_theme_mod('jumbotron_title', '¡Jumbotron Title!'); ?></h1>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas commodo auctor quam sed porttitor. Suspendisse eu ligula sit amet ligula euismod ornare. Sed volutpat ante felis, vestibulum luctus lectus ultricies a. Cras fermentum consectetur felis posuere vehicula. Sed efficitur ultricies orci, quis aliquet ligula dignissim ac.
+                <?php echo get_theme_mod('jumbotron_description', 'Descripción que hay que editar desde la pagina de customización de la plantilla...'); ?>
             </p>
         </div>
         <div class="col-lg-4 hidden-md hidden-xs hidden-sm">

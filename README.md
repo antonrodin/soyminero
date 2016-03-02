@@ -14,10 +14,8 @@ Instalación
 ==================================
 
 1. Crear una pagina con plantilla "Home". En la portada.
-2. Editar el archivo header.php:
-2.1. Añadir Analytics
-2.2. Añadrir Adsense
-2.3. Cambiar el logotipo
+2. Cambiar el logotipo & jumbotron image
+3. Editar opciones dentro de la personalización de la plantilla
 
 Plugins Obligatorios
 ==================================

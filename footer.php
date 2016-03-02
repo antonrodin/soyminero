@@ -18,15 +18,12 @@
             <div class="col-lg-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <img class="pull-left" width="80" height="80" src="<?php echo bloginfo('template_url'); ?>/img/logotipo.png" alt="Logotipo" />
                 <p><small>
-                   Somos un equipo de personas normales al que le cuesta 
-                   dormir por la noche sin una temperatura idónea, por ello hemos creado
-                   <a href="http://www.aaportatil.com">AAPortátil</a>.</small>
+                   <?php echo get_theme_mod('footer_left', 'Opción por defecto: Footer left'); ?>
                 </p>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <p><small>
-                    Esta página esta creada con Wordpress a partir de una plantilla de <a href="https://github.com/antonrodin/soyminero">SoyMinero</a> 
-                    Hecha con <i class="fa fa-heart"></i> por <a href="http://www.azr.es">AZR</a></small>
+                    <?php echo get_theme_mod('footer_right', 'Opción por defecto: Footer right'); ?>
                 </p>
             </div>
         </div>
