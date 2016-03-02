@@ -1,3 +1,8 @@
+
+<div class="container-fluid">
+    <p class="clearfix">&nbsp;</p>
+</div>
+
 <footer><div id="footer" class="container-fluid"><div class="container">
         <div class="row">
                 <?php if ( is_active_sidebar( 'footer-left' ) ) : ?>

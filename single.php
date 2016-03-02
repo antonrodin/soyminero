@@ -6,7 +6,7 @@ get_header(); ?>
 
 <div class="container hidden-sm hidden-xs">
     <!-- Begin Rich Snippets -->
-    <ol class="breadcrumb">
+    <ol class="breadcrumb text-small">
             <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
                 <a href="<?php bloginfo('url'); ?>" itemprop="url" title="<?php bloginfo('name'); ?>"><span itemprop="title">Portada</span></a>
             </li> 
@@ -25,12 +25,12 @@ get_header(); ?>
 
 <div class="container">
 <div class="row">
-     <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+     <div class="col-md-8 col-sm-12">
     <?php /* The loop */ ?>
     <?php while ( have_posts() ) : the_post(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <header> 
-                <h1 class="text-center"><?php the_title(); ?></h1>
+                <h1><?php the_title(); ?></h1>
                 <?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
                 <div class="entry-thumbnail">
                     <?php the_post_thumbnail('full', array('class' => 'img-responsive img-border-top-bottom')); ?>
@@ -75,9 +75,7 @@ get_header(); ?>
 
     </div>
     
-    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-        <?php mostrar_adsense_responsivo(); ?>     
-        <!-- Right Sidebar -->
+    <div class="col-md-4 col-sm-12">
         <?php if ( is_active_sidebar( 'sidebar-right' ) ) : ?>
             <?php dynamic_sidebar( 'sidebar-right' ); ?>
         <?php endif; ?>

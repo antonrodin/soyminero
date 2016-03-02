@@ -76,9 +76,3 @@
     </div><!-- End First Container--></nav>
     </div><!-- End Second Container-->
 </header>
-
-<div class="container-fluid container-fluid-styled">
-    <div class="container">
-        <?php mostrar_adsense_responsivo(); ?>
-    </div>
-</div>
