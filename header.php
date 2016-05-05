@@ -19,7 +19,7 @@
 
 <!-- Bootstrap & Free Cosmo Themplate, FontAwesome CDN... -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.min.css">
 
 <meta name="viewport" content="width=device-width">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -39,7 +39,10 @@
 <?php //Logo y descripción ?>
 <div class="container-fluid background-color-black"><div class="container">
         <div class="row">  
-            <div class="col-md-12 hidden-xs">
+            <div class="col-md-2 hidden-xs">
+                <img src="<?php echo get_theme_mod('header_logo', 'Jumbotron Description'); ?>" alt="Logotipo de www.aaportatil.com" >
+            </div>
+            <div class="col-md-10 hidden-xs">
                     <h1 class="main-title"><?php bloginfo("name"); ?></h1>
                     <h2 class="sub-title"><?php echo get_theme_mod('header_eslogan', 'Eslogan por defecto de la plantilla'); ?></h2>
                     <p class="site-description"><?php bloginfo( 'description' ); ?></p>

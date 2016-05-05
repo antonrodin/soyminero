@@ -14,7 +14,7 @@ require_once('lib/wp_bootstrap_navwalker.php');
 /**
 * Custom widgets for wordpress theme
 */
-require_once('widgets/exchange.php');
+require_once('lib/custom_options.php');
 
 function soyminero_menu() {
     $menus = array(
@@ -139,14 +139,6 @@ if (function_exists( 'add_theme_support' ) ) {
 }
 
 /**
- * Register custom widgets
- */
-function soyminero_register_widgets() {
-    register_widget( 'ExchangeSoyminero' );
-}
-add_action( 'widgets_init', 'soyminero_register_widgets' );
-
-/**
  * Max content width of images, videos... 
  */
 if (!isset($content_width)) { $content_width = 1024; }
@@ -163,115 +155,6 @@ function soyminero_add_editor_styles() {
 }
 add_action( 'init', 'soyminero_add_editor_styles' );
 
-/**
- * Customización de la plantilla
- * Es decir añadir opciones a la plantilla
- */
-function soyminero_register_theme_customizer($wp_customizer) {
-
-    //Footer: añadir sección footer a la plantilla
-    $wp_customizer->add_section(
-        'soyminero_footer_options',
-        array(
-            'title'     => 'Footer Options',
-            'priority'  => 200
-        )
-    );
-
-    //Eslogan
-    $wp_customizer->add_setting(
-            'header_eslogan',
-            array(
-                'default'   => 'Añade aquí tu Eslogan para la plantilla',
-                'transport' => 'postMessage'
-            )
-    );
-    $wp_customizer->add_control(  
-      'soyminero_header_eslogan',  
-      array(  
-        'section'   => 'title_tagline',  
-        'label'     => 'Header Eslogan',  
-        'type'      => 'textarea',  
-        'settings'  => 'header_eslogan'  
-      )
-    );
-
-    //Jumbotron Title H1
-    $wp_customizer->add_setting(
-            'jumbotron_title',
-            array(
-                'default'   => '¡Jumbotron Title!',
-                'transport' => 'postMessage'
-            )
-    );
-    $wp_customizer->add_control(  
-      'soyminero_jumbotron_title',  
-      array(  
-        'section'   => 'title_tagline',  
-        'label'     => 'Jumbotron Title',  
-        'type'      => 'text',  
-        'settings'  => 'jumbotron_title'  
-      )
-    );
-
-    //Meta Analytics
-    $wp_customizer->add_setting(
-            'meta_analytics',
-            array(
-                'default'   => '<script></script>',
-                'transport' => 'postMessage'
-            )
-    );
-    $wp_customizer->add_control(  
-      'soyminero_meta_analytics',  
-      array(  
-        'section'   => 'title_tagline',  
-        'label'     => 'Analytics Script',  
-        'type'      => 'textarea',  
-        'settings'  => 'meta_analytics'  
-      )
-    );
-
-    //Footer Left
-    $wp_customizer->add_setting(
-            'footer_left',
-            array(
-                'default'   => 'Descripción de la pagina web. Hay que editar la misma en el footer.php
-                   Aunque lo suyo seria añadir una opción a la plantilla.',
-                'transport' => 'postMessage'
-            )
-    );
-    $wp_customizer->add_control(  
-      'soyminero_footer_left',  
-      array(  
-        'section'   => 'soyminero_footer_options',  
-        'label'     => 'Footer Left',  
-        'type'      => 'textarea',  
-        'settings'  => 'footer_left'  
-      )
-    );
-
-    //Footer Right
-    $wp_customizer->add_setting(
-            'footer_right',
-            array(
-                'default'   => 'Esta página esta creada con Wordpress a partir de una plantilla de <a href="https://github.com/antonrodin/soyminero">SoyMinero</a> 
-                    Hecha con <i class="fa fa-heart"></i> por <a href="http://www.azr.es">AZR</a></small>',
-                'transport' => 'postMessage'
-            )
-    );
-    $wp_customizer->add_control(  
-      'soyminero_footer_right',  
-      array(  
-        'section'   => 'soyminero_footer_options',  
-        'label'     => 'Footer Right',  
-        'type'      => 'textarea',  
-        'settings'  => 'footer_right'  
-      )
-    );
-
-}
-add_action('customize_register', 'soyminero_register_theme_customizer');
 
 /**
 * Responsive Embed Youtube Videos
